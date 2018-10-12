@@ -9,13 +9,15 @@ const indexHTML = (()=>{
 
 app.use('/dist', express.static(path.resolve(__dirname,'./dist')));
 
+require('./build/dev-server')(app);
+
 app.get("*", (req,res)=>{
   //res.write("Hey there");
   res.write(indexHTML);
   res.end();
 });
 
-const port = process.env.PORT || 30000;
+const port = process.env.PORT || 3000;
 app.listen(port, () =>{
   console.log(`server started at http://localhost:${port}`);
 })
