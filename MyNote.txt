@@ -10,3 +10,8 @@ Module Bundler:
 
 username: bill
 password: vuejs
+
+Try run $vm.store.state.isAuthenticated = true in developer tool
+
+Vuex:
+Component -> Action (logout()) -> Mutations (logout()) -> State (isAuthenticated)
